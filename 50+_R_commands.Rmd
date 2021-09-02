@@ -1,5 +1,4 @@
 ---
-title: "LA 1"
 author: "Pooja(1NT18IS110) , Pranathi(1NT18IS113)"
 output: word_document
 ---
@@ -8,7 +7,6 @@ output: word_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## LA1 ASSIGNMENT
 #### Dataset :Pokemon and their stats
 
 ### Description of Data
