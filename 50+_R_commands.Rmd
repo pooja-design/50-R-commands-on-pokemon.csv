@@ -1,0 +1,113 @@
+---
+title: "LA 1"
+author: "Pooja(1NT18IS110) , Pranathi(1NT18IS113)"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## LA1 ASSIGNMENT
+#### Dataset :Pokemon and their stats
+
+### Description of Data
+
+This data set includes 1045 Pokemons, including their number, name, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed. It has been of great use when teaching statistics to kids. With certain types you can also give a geeky introduction to machine learning.
+
+
+Name: Name of each pokemon.
+Total: sum of all stats that come after this, a general guide to how strong a pokemon is.
+HP: hit points, or health, defines how much damage a pokemon can withstand before fainting.
+Attack: the base modifier for normal attacks (eg. Scratch, Punch).
+Defense: the base damage resistance against normal attacks.
+SP Atk: special attack, the base modifier for special attacks (e.g. fire blast, bubble beam).
+SP Def: the base damage resistance against special attacks.
+Speed: determines which pokemon attacks first each round.
+```{r}
+pokemon_data=read.csv(file=file.choose(),header = TRUE)
+```
+Display head of data
+```{r}
+head(pokemon_data)
+```
+Display first n rows specified.
+```{r}
+head(pokemon_data,n=10)
+```
+It displays first 10 rows.
+
+
+Display tail of data.
+```{r}
+tail(pokemon_data)
+```
+Display n rows specified from bottom
+```{r}
+tail(pokemon_data,n=10)
+```
+It displays last 10 rows.
+
+Determining Type of data
+```{r}
+class(pokemon_data)
+```
+Determine structure of data
+```{r}
+str(pokemon_data)
+```
+Summarising the data 
+```{r}
+summary(pokemon_data)
+```
+for Numerical data coloumns like Total,HP,Summary command shows the Minimum value, Maximum value, Mean, Meadian, 1st and 3rd quartiles.
+For Text data coloumns summary command will give the total number of records of that coloumn and class of that coloumn.
+
+Displaying Dimension of the data
+```{r}
+dim(pokemon_data)
+```
+The dataset contains 1045 rows and 8 coloumns.
+
+Displaying coloumn names of data
+```{r}
+colnames(pokemon_data)
+```
+Displaying structure of some coloumns in the data
+```{r}
+class(pokemon_data$Name)
+```
+```{r}
+class(pokemon_data$Total)
+```
+Displaying type of some data structure in the data
+```{r}
+typeof(pokemon_data$Name)
+```
+```{r}
+typeof(pokemon_data$Total)
+```
+List of variables present in pokemon data
+```{r}
+ls(pokemon_data)
+```
+Some pattern matching operations on variable of pokemon_data
+```{r}
+ls(pokemon_data,pattern="^Sp")
+```
+variables which starts with letters SP
+
+```{r}
+ls(pokemon_data,pattern="^[AD]")
+```
+Variables whose name starts with A or D
+
+```{r}
+ls(pokemon_data,pattern="t.l")
+```
+Variables starts with t and ending l.
+
+```{r}
+ls(pokemon_data,pattern="ce$")
+```
+Variables names ending with pattern ce.
